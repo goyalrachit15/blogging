@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("./partials/header.ejs")%>
+<body>
+    <%-include("./partials/navbar.ejs")%>
+        <h2>All Blogs</h2>
+    
+    <% if(blogs.length > 0) {%>
+    <%for(let blog of blogs){%>
+        <a href="/blogs/<%=blog.id%>">
+        <p style="font-size: x-large; margin-bottom: 1rem;"><u><%=blog.title%></u></p style="font-size: x-large;">
+        <p style="font-size: larger;"><%=blog.snippet%></p>
+    </a>
+    <hr>
+    <%}%>
+    <%}else{%>
+        <h3>No Blogs Yet</h3>
+    <%}%>
+    <%-include("./partials/footer.ejs")%>
+</body>
+</html>
