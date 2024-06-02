@@ -7,10 +7,11 @@
     
     <% if(blogs.length > 0) {%>
     <%for(let blog of blogs){%>
-        <a href="/blogs/<%=blog.id%>">
         <p style="font-size: x-large; margin-bottom: 1rem;"><u><%=blog.title%></u></p style="font-size: x-large;">
-        <p style="font-size: larger;"><%=blog.snippet%></p>
-    </a>
+        <p style="font-size: larger;margin-bottom: 0.5rem;"><%=blog.snippet%></p>
+        <a href="/blogs/<%=blog.id%>" style="color: rgb(106, 17, 184);">
+            Read More
+        </a>
     <hr>
     <%}%>
     <%}else{%>
